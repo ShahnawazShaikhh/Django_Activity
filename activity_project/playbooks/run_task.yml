@@ -1,0 +1,12 @@
+---
+- name: Run Task From Django
+  hosts: all
+  become: yes
+
+  vars:
+    activity: ""
+
+  tasks:
+    - name: Print activity name
+      debug:
+        msg: "Running activity: {{ activity }}"
